@@ -1,0 +1,4 @@
+*.synctex.gz
+.DS_Store
+jusyo.txt
+*.png
