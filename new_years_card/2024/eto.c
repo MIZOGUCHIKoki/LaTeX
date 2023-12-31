@@ -3,7 +3,7 @@
 int main() {
     pid_t pid; int pipefd[2]; pipe(pipefd);
     int year = 2024;
-    char eto[7]; // 漢字3Byte 2文字と終端文字1Byte
+    char eto[7]; // KANJI chars 6 octets and null chars 1 octet.
     pid = fork();
     if (pid == 0) {
         int gan = (year - 4) % 10; // 干
