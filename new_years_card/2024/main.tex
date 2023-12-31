@@ -1,36 +1,29 @@
 \documentclass[twocolumn,fontsize=9pt]{jlreq}
-\usepackage[papersize={148truemm, 100truemm}, top=15truemm,bottom=15truemm,left=10truemm,right=10truemm,headheight=20pt]{geometry}
-\usepackage{fancyhdr,fancybox,ascmac}
+\usepackage[papersize={148truemm, 100truemm}, top=5truemm,bottom=5truemm,left=5truemm,right=5truemm]{geometry}
+\usepackage{fancybox,ascmac}
 \usepackage{xcolor,graphicx,url}
 \usepackage{listings,framed}
 \lstset{
     language=C,
     breaklines=true,
     breakindent=10pt,
-    basicstyle=\ttfamily\tiny,
+    basicstyle=\ttfamily\scriptsize,
     frame=TB,
     keywordstyle={\color{red!70!black}\bfseries\ttfamily},
     commentstyle={\color{green!50!black}\ttfamily},
     stringstyle={\color{blue}\ttfamily},
     morekeywords={pipe, fork, pid_t, printf, sprintf, write, read},
-}
-
-\fancypagestyle{fancy}{
-    \fancyhf{}
-    \renewcommand{\headrulewidth}{0pt}
-    \renewcommand{\footrulewidth}{0pt}
-    \fancyfoot[L]{\scriptsize Updated: Dec. 31st, 2023}
-    \fancyhead[R]{2024年}
-    \fancyfoot[R]{\scriptsize Compiled by Lua\LaTeX}
+    numbers=left,
+    numberstyle={\ttfamily\scriptsize},
+    numbersep = {1pt}
 }
 \fancyput(-20truemm,-60truemm){
-	\color{black!10}{
+	\color{green!10}{
 		\rotatebox{50}{
 			\scalebox{10}{甲辰}     
 		}
 	}
 }
-\pagestyle{fancy}
 \begin{document}
 \twocolumn[
     \begin{center}
@@ -46,6 +39,9 @@
         令和6年元旦
     \end{flushright}
 }
+\begin{itembox}[l]{\small Message}
+    \vspace{1cm}
+\end{itembox}
 \begin{framed}
     {\scriptsize\noindent\input{jusyo.txt}}
     \vspace{.5cm}
@@ -53,7 +49,7 @@
         {\LARGE 溝\ 口\ \  洸\ 熙}
     \end{center}
 \end{framed}
-\noindent\tiny{\url{https://github.com/MIZOGUCHIKoki/LaTeX/blob/master/new_years_card/2024/main.tex}}
+\noindent\tiny{\url{https://github.com/MIZOGUCHIKoki/LaTeX/blob/master/new_years_card/2024/main.tex}\hfill Compiled on Dec. 31, 2023 by Lua\LaTeX}
 \newpage
 \lstinputlisting{eto.c}
 \small{\texttt{\$ gcc eto.c -o eto \&\& ./eto \fbox{Enter}}\ \ \footnote{（無駄だけど）マルチプロセスで処理しています}\\
