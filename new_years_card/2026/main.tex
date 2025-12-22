@@ -1,0 +1,95 @@
+\documentclass[twocolumn]{jlreq}
+\usepackage{luatexja}
+\usepackage{luatexja-fontspec}
+\usepackage[papersize={148truemm, 100truemm},margin=4pt]{geometry}
+\usepackage{fancybox}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{ref.bib}
+\usepackage{xcolor,graphicx,url}
+\usepackage{listings,framed}
+\usepackage{amsmath,amssymb,mathtools,fontawesome5}
+\setsansjfont[
+    UprightFont = KouzanMouhituFontOTF,
+]{KouzanMouhituFontOTF}
+\setsansfont[
+    UprightFont = KouzanMouhituFontOTF,
+]{KouzanMouhituFontOTF}
+\renewcommand\kanjifamilydefault{\gtdefault}
+\renewcommand\familydefault{\sfdefault}
+\lstset{
+    language=C,
+    breaklines=true,
+    breakindent=10pt,
+    basicstyle=\ttfamily\scriptsize,
+    frame=TB,
+    keywordstyle={\color{red!70!black}\bfseries\ttfamily},
+    commentstyle={\color{green!50!black}\ttfamily},
+    stringstyle={\color{blue}\ttfamily},
+    morekeywords={pipe, fork, pid_t, printf, sprintf, write, read},
+    numbers=left,
+    numberstyle={\ttfamily\scriptsize},
+    numbersep = {1pt}
+}
+
+\fancyput(-20truemm,-60truemm){
+	\color{black!10}{
+		\rotatebox{50}{
+			\scalebox{10}{丙午}     
+		}
+	}
+}
+\begin{document}
+\twocolumn[
+    % \vspace{-1cm}
+    \begin{center}
+        {\Huge 謹賀新年}
+    \end{center}
+]
+{\small
+    謹んで新年のご挨拶を申し上げます\par
+    旧年中は大変お世話になりありがとうございました\par
+    本年も変わらぬご厚誼のほどお願い申し上げます
+    \begin{flushright}
+        令和7年元旦
+    \end{flushright}
+}
+\vspace{-.3cm}
+\begin{framed}
+    \vspace{2.5cm}
+\end{framed}
+% \vspace{-.3cm}
+\noindent\scriptsize{\url{https://github.com/MIZOGUCHIKoki/LaTeX/tree/master/new_years_card/2026/main.tex}\\
+    \hfill Compiled on Dec. 31, 2025 by Lua\LaTeX}
+\vspace{.5cm}
+\parbox{.9\linewidth}{
+    \setlength{\baselineskip}{5pt}
+    {\fontsize{5px}{0px}\selectfont\noindent\input{jusyo.txt}}
+    \vspace{.3cm}
+    \begin{center}
+        {\LARGE 溝\ 口\ \  洸\ 熙}
+    \end{center}
+    \vspace{.3cm}
+}
+\newpage
+\rmfamily
+2026年はハッピー数の年です．\par
+ハッピー数とは，各桁の数字を2乗して足し合わせ，その結果に対して同じ操作を繰り返したとき，最終的に1に到達するような数のことを言います．\par
+例えば，2026の場合，次のようになります．
+\begin{align*}
+    \underbrace{2^2 + 0^2 + 2^2 + 6^2}_{2026の各桁の二乗の和} & = 4 + 0 + 4 + 36 = 44 \\
+    4^2 + 4^2                                         & = 16 + 16 = 32        \\
+    3^2 + 2^2                                         & = 9 + 4 = 13          \\
+    1^2 + 3^2                                         & = 1 + 9 = 10          \\
+    1^2 + 0^2                                         & = 1 + 0 = 1
+\end{align*}
+したがって，2026はハッピー数です．\par
+皆さんの今年一年が幸せな（\faHandPeace[regular]~~ハッピーな~~\faHandPeace[regular]）年でありますように．
+
+ちなみに，ハッピー数は\(n\)次元に拡張することもできる．\citeauthor{1050564288795241088}による，\(n\)次元ハッピー関数
+\begin{align*}
+    \mathrm{Happy}(n,x):\mathbb{N}\times \mathbb{N}\cup\{0\}\rightarrow \mathbb{N}\cup\{0\}
+\end{align*}
+の定義は，文献\cite{1050564288795241088}に詳しい．
+
+\noindent\parbox{\linewidth}{\tiny\cite{1050564288795241088}\fullcite{1050564288795241088}}
+\end{document}
